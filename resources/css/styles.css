@@ -7,14 +7,13 @@
 .container{
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
+    margin: auto;
     width: 80%;
     height: 50vh;
 }
-.form{
 
-}
 input{
     width: 215px;
   padding: 10px 0 10px 15px;
@@ -51,7 +50,7 @@ button{
     outline: 0;
 }
 #expenses-table{
-    width: 100%;
+    width: 40%;
     margin: 0 auto;
     border-collapse: collapse;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
