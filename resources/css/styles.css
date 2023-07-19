@@ -28,8 +28,20 @@ input{
   transition: all .3s ease-in-out;
 }
 #add-button{
-    width: 100px;
-    padding: 10px 0 10px 15px;
+    width: 150px;
+    padding: 10px;
+    font-family: "Open Sans", sans;
+    font-weight: 400;
+    color: #ffffff;
+    background: #33ac8c;
+    border: 0;
+    border-radius: 3px;
+    outline: 0;
+    text-align: center;
+}
+button{
+    width: 70px;
+    padding: 10px;
     font-family: "Open Sans", sans;
     font-weight: 400;
     color: #ffffff;
@@ -38,7 +50,6 @@ input{
     border-radius: 3px;
     outline: 0;
 }
-
 #expenses-table{
     width: 100%;
     margin: 0 auto;
@@ -46,4 +57,17 @@ input{
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
     
+}
+th{
+    font-size: 2rem;
+    background-color: #377D6A;
+}
+tr{
+    background-color: #d9ece8;
+    font-size: 1.2rem;
+    padding: 20px;
+}
+th, td{
+    padding: 10px;
+    text-align: center;
 }
