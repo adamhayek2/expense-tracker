@@ -8,19 +8,21 @@
     <title>Expense Tracker</title>
 </head>
 <body>
-        
-    <input type="text" id="expense-name" placeholder="Expense Name">
-    <input type="number" id="expense-price" placeholder="Expense Price">
-    
-    <button id="add-button">Add Expense</button>
-        
-            <table id="expenses-table">
-                <!-- Table header and existing rows, if any -->
-                <tr>
-                    <th>Name</th>
-                    <th>Price</th>
-                </tr>
-            </table>
+    <div class="container">   
+        <div class="form">
+            <input type="text" id="expense-name" placeholder="Expense Name">
+            <input type="number" id="expense-price" placeholder="Expense Price">
+
+            <button id="add-button">Add Expense</button>
+        </div>
+            
+        <table id="expenses-table">
+            <!-- Table header and existing rows, if any -->
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+            </tr>
+        </table>
     </div>
     <script src="resources/js/jquery.js"></script>
 </body>

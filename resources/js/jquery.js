@@ -1,6 +1,6 @@
 
 
-
+let totalAmount = 0;
 
 function singleExpenseElement(name, price){
     return `<tr>
@@ -11,26 +11,42 @@ function singleExpenseElement(name, price){
                     <button class="save-button" style="display: none;">Save</button>
                     <button class="delete-button">Delete</button>
                 </td>
-            </tr>    `;
+            </tr>`;
 }
 
-function addExpense() {
+// Total amount
+function updateTotalAmount() {
+    $("#total-row").remove(); 
+  
+    $("#expenses-table").append(`
+      <tr id="total-row">
+        <td><strong>Total:</strong></td>
+        <td><strong>${totalAmount}</strong></td>
+        <td></td>
+      </tr>
+    `);
+  }
+
+
+  function addExpense() {
     const nameInput = $("#expense-name").val().trim();
     const priceInput = $("#expense-price").val().trim();
-
+  
     // Validation if the input is empty
     if (nameInput === "" || priceInput === "") return;
-
-    // Create a new row with the provided name and price
-    const newRow = singleExpenseElement(nameInput, priceInput);
-
-    // Append the new row to the table
+  
+    const price = parseFloat(priceInput); // Convert price to a number
+    if (isNaN(price)) return; // Check if price is a valid number
+  
+    totalAmount += price; // Add the price to the total
+    const newRow = singleExpenseElement(nameInput, price.toFixed(2)); // Use toFixed to display 2 decimal places
     $("#expenses-table").append(newRow);
-
-    // Clear the input fields after adding the expense
+  
+    updateTotalAmount(); // Update the total row
+  
     $("#expense-name").val("");
     $("#expense-price").val("");
-}
+  }
 
 // Editing items
 function editExpenseRow(row){
